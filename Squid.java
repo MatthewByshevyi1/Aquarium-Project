@@ -14,6 +14,7 @@ public class Squid extends SeaCreature{
         if (moveCounter == 1) {
             position += speed * direction;
             moveCounter = 0;
+            keepInsideTank(tankWidth);
         }
         else {
             moveCounter++;

@@ -9,6 +9,9 @@ public class AquariumApp {
         // Two starter creatures.
         tank[0] = new Fish("Nemo", 4, 3, 1, "><>");
         tank[1] = new Fish("Dory", 30, 2, -1, "><((('>");
+        tank[2] = new Squid("Gerald",15,10,1,"<☲>≼≼≼≼");
+        tank[3] = new Crab("Eduardio",25,4,-1,"ʚ„[•ᴗ•]„ɞ");
+
 
         // =====================================================
         // STUDENT TODO
