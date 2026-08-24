@@ -4,9 +4,9 @@ public class Crab extends SeaCreature {
     
     public Crab (String name, int position, int speed, int direction, String s) {
         super(name, position, speed, direction);
-        symbol = s;
+        symbol = "\u001B[31m" + s + "\u001B[97m";
     }
-
+// "\u001B[38;2;255;127;0m" + + "\u001B[97m"
     @Override
     public void move(int tankWidth) {
         if ( (int)(Math.random() * 10) != 0) {
@@ -21,7 +21,6 @@ public class Crab extends SeaCreature {
 
     @Override
     public String getSymbol() {
-        //return "\u001B[38;2;255;127;0m" + symbol + "\u001B[0m";
         return symbol;
     }
 
