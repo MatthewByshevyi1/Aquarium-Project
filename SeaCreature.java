@@ -4,6 +4,7 @@ public abstract class SeaCreature {
     protected int position;
     protected int speed;
     protected int direction;
+    protected static final String COLOR = "";
 
     public SeaCreature(String name, int position, int speed, int direction) {
         this.name = name;
@@ -71,5 +72,9 @@ public abstract class SeaCreature {
                 + " | position=" + position
                 + " | speed=" + speed
                 + " | direction=" + getDirectionWord();
+    }
+
+    public String getColor() {
+        return COLOR;
     }
 }

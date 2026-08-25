@@ -1,6 +1,7 @@
 public class Fish extends SeaCreature {
 
     private String symbol;
+    private static final String COLOR = "\u001b[34m";
 
     public Fish(String name, int position, int speed, int direction, String symbol) {
         super(name, position, speed, direction);
@@ -20,5 +21,10 @@ public class Fish extends SeaCreature {
 
     private String reverseSymbol(String text) {
         return new StringBuilder(text).reverse().toString();
+    }
+
+    @Override
+    public String getColor() {
+        return COLOR;
     }
 }

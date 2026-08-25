@@ -49,10 +49,18 @@ public class AquariumApp {
                     break;
 
                 case "3":
-                    aquarium.listCreatureDetails();
+                    for (int i = 0; i < 10; i++) {
+                        aquarium.advanceTurn();
+                        aquarium.display();
+                        stop(1000);
+                    }
                     break;
 
                 case "4":
+                    aquarium.listCreatureDetails();
+                    break;
+
+                case "5":
                     running = false;
                     System.out.println("Aquarium closed. Goodbye!");
                     break;
@@ -69,7 +77,13 @@ public class AquariumApp {
         System.out.println();
         System.out.println("1. View Aquarium");
         System.out.println("2. Advance One Turn");
-        System.out.println("3. View Creature Details");
-        System.out.println("4. Quit");
+        System.out.println("3. Advance 10 turns");
+        System.out.println("4. View Creature Details");
+        System.out.println("5. Quit");
+    }
+
+    public static void stop(int milliseconds) {
+        try { Thread.sleep(milliseconds); }
+        catch (InterruptedException e) { e.printStackTrace(); }
     }
 }

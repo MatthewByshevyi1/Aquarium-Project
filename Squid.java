@@ -1,6 +1,7 @@
 public class Squid extends SeaCreature{
     
     private String symbol;
+    private static final String COLOR = "\u001B[35m";
     private int moveCounter = 0;
     private int inkCounter = 0;
     
@@ -30,11 +31,15 @@ public class Squid extends SeaCreature{
     }
 
     public void loseTentacles() {
-        if ((int)(Math.random() * 10) == 1 && symbol.length() > 4) {
+        if ((int)(Math.random() * 25) == 1 && symbol.length() > 4) {
             symbol = symbol.substring(0,(symbol.length()-1));
         }
     }
 
+    @Override
+    public String getColor() {
+        return COLOR;
+    }
 }
 
 // "<☲>≼≼≼"

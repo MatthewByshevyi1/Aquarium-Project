@@ -82,20 +82,13 @@ public class Aquarium {
     }
 
     private String buildLane(SeaCreature creature) {
-        char[] lane = new char[TANK_WIDTH];
-        Arrays.fill(lane, ' ');
-
         String symbol = creature.getSymbol();
-        int start = Math.max(0,
-                Math.min(creature.getPosition(), TANK_WIDTH - symbol.length()));
+        int start = Math.max(0,Math.min(creature.getPosition(), TANK_WIDTH - symbol.length()));
+        
+        String leftBuffer = " ".repeat(start);
+        String rightBuffer = " ".repeat(TANK_WIDTH - start - symbol.length());
 
-        for (int i = 0; i < symbol.length() && start + i < lane.length; i++) {
-            lane[start + i] = symbol.charAt(i);
-        }
-
-        return "|" + new String(lane) + "| "
-                + creature.getName() + " ("
-                + creature.getClass().getSimpleName() + ")";
+        return "|" + creature.getColor() + leftBuffer + symbol + rightBuffer + "\u001B[97m" + "|";
     }
 
     private String center(String text, int width) {
