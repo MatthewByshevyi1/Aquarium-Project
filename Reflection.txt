@@ -1,0 +1,7 @@
+1. One example of inheritance is how the Squid, Crab, and Fish subclasses all inherited the move() and getSymbol() methods.
+2. One example was how I overrode the move method for Squid and Crab since they needed to be able to move in different ways.
+3. Because they are all technically SeaCreatures due to polymorphism.
+4. In example one, copy and Nemo pointed to the same object because copy was set = to Nemo.
+5. I was having trouble committing on my Chromebook before so I didn't have as many commits, but my biggest one was when I added my Squid and Crab classes.
+6. Likely I would reconsider how to display it since with a 1000 creatures you would have to generate thousands of lines of code whenever you ran the program
+   which would very likely cause some serious lag.
